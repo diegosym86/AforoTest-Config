@@ -16,7 +16,12 @@ Este proyecto Cuenta Con los archivos de configuracion centralizados de cada uno
 - [AforoTest-Security](https://github.com/jhonariza03/AforoTest-Security) - [ms-test-security-dev.properties](https://github.com/jhonariza03/AforoTest-Config/blob/main/ms-test-security-dev.properties)
 - [AforoTest-Gateway](https://github.com/jhonariza03/AforoTest-Gateway) - [ms-test-gateway-dev.properties](https://github.com/jhonariza03/AforoTest-Config/blob/main/ms-test-gateway-dev.properties)
 
-y finalmente un archico de configuración global
+y finalmente un archivo de configuración global
 
 - [application-dev-properties](https://github.com/jhonariza03/AforoTest-Config/blob/main/application-dev.properties)
+
+### Postman Collection
+
+Puede Importar la colección de Postman desde el siguiente enlace [PostmanCollection](https://www.getpostman.com/collections/38c4dfee61c3b37b05ea) o descargar el JSON que se encuentra en el presente proyecto [PostmanJSON](https://github.com/jhonariza03/AforoTest-Config/blob/main/Aforo-Test-Final.postman_collection.json)
+
 
