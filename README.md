@@ -1,3 +1,6 @@
+# Arquitectura Propuesta
+![alt text](https://github.com/jhonariza03/AforoTest-Config/blob/main/Arquitectura.png)
+
 # AforoTest-Config
 Patrón de configuración para todos los Microservicios del Proyecto
 
