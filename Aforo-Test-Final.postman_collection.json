@@ -1,0 +1,1587 @@
+{
+	"info": {
+		"_postman_id": "f74485b6-0a9c-40c2-888a-da4a42e613b6",
+		"name": "Aforo-Test-Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Get All Invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/invoices",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"invoices"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Invoices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8001/invoices",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"invoices"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 May 2021 22:46:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"amount\": 1000,\n        \"state\": 0\n    },\n    {\n        \"id\": 2,\n        \"amount\": 5000,\n        \"state\": 0\n    },\n    {\n        \"id\": 3,\n        \"amount\": 300,\n        \"state\": 0\n    },\n    {\n        \"id\": 4,\n        \"amount\": 600,\n        \"state\": 0\n    },\n    {\n        \"id\": 5,\n        \"amount\": 400,\n        \"state\": 0\n    },\n    {\n        \"id\": 6,\n        \"amount\": 100,\n        \"state\": 0\n    },\n    {\n        \"id\": 7,\n        \"amount\": 1000,\n        \"state\": 0\n    },\n    {\n        \"id\": 8,\n        \"amount\": 2000,\n        \"state\": 0\n    },\n    {\n        \"id\": 9,\n        \"amount\": 5000,\n        \"state\": 0\n    },\n    {\n        \"id\": 10,\n        \"amount\": 1000,\n        \"state\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Invoice By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/invoices/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"invoices",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Invoice By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8001/invoices/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"invoices",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 May 2021 22:45:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"amount\": 1000,\n    \"state\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pay",
+			"item": [
+				{
+					"name": "Pay Invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"amount\": 100,   \r\n    \"invoiceId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/pay",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"pay"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Pay Invoice",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"amount\": 100,   \r\n    \"invoiceId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/pay",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"pay"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 May 2021 01:00:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 11,\n    \"invoiceId\": 3,\n    \"amount\": 100,\n    \"date\": \"2021-05-18T01:00:58.536+00:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Get Transaction By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8003/invoice/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"invoice",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Transaction By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8003/invoice/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"invoice",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 May 2021 01:02:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"10\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"11\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8003/invoice",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"invoice"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Transaction",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8003/invoice",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"invoice"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 May 2021 01:03:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"10\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"11\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Security",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "webAngular",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jhon",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8004/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "jhon",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8004/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8004",
+									"path": [
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 May 2021 14:31:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNTAxMTgsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjQ0OTUzZWY1LWYwZDItNDljZC1iNTc1LTM2ODg0YWY1YTY0MSIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.Swi4Jf5_8fAWA3zPk2D-Tru9pN0bLTBz7Kzn79AvPqc\",\n    \"token_type\": \"bearer\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqaG9uIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjQ0OTUzZWY1LWYwZDItNDljZC1iNTc1LTM2ODg0YWY1YTY0MSIsImV4cCI6MTYyMTM1MTkxOCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI3N2IxYmRlNS1mZjMwLTRkMDItOTM4Mi04N2FkYTYzNTdjNDIiLCJjbGllbnRfaWQiOiJ3ZWJBbmd1bGFyIn0.BSWf4CxV5ehgl6_fuo1T-8BsnP4LHN8YoU2i189unEM\",\n    \"expires_in\": 1799,\n    \"scope\": \"read write\",\n    \"jti\": \"44953ef5-f0d2-49cd-b575-36884af5a641\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "webAngular",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqaG9uIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6ImEyNDBkMDI3LTlmODAtNDcyNS1iMDExLTFiMmZkZmMwNjgxYiIsImV4cCI6MTYyMTM1MjA4MiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiIzY2VjNTVkNC1mY2YzLTRjYzQtOWZmYy01NjEwZmM3OTExNTEiLCJjbGllbnRfaWQiOiJ3ZWJBbmd1bGFyIn0.by7yO9UjZq-IkZQMbfXcRV9Xbo8QvM0HxaxeOWkNwfE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8004/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "refresh_token",
+											"type": "text"
+										},
+										{
+											"key": "refresh_token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqaG9uIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6ImEyNDBkMDI3LTlmODAtNDcyNS1iMDExLTFiMmZkZmMwNjgxYiIsImV4cCI6MTYyMTM1MjA4MiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiIzY2VjNTVkNC1mY2YzLTRjYzQtOWZmYy01NjEwZmM3OTExNTEiLCJjbGllbnRfaWQiOiJ3ZWJBbmd1bGFyIn0.by7yO9UjZq-IkZQMbfXcRV9Xbo8QvM0HxaxeOWkNwfE",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8004/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8004",
+									"path": [
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 May 2021 14:34:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNTAyOTcsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjgzM2U0OTFmLWE2YmYtNDI0Mi1hMjNmLWE1MjI3ZTNhM2IxZSIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.UL6RagH5qFkZ-XOJ93rWLR6nh_zU79eFC8AXkJh79HA\",\n    \"token_type\": \"bearer\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqaG9uIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjgzM2U0OTFmLWE2YmYtNDI0Mi1hMjNmLWE1MjI3ZTNhM2IxZSIsImV4cCI6MTYyMTM1MjA4MiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiIzY2VjNTVkNC1mY2YzLTRjYzQtOWZmYy01NjEwZmM3OTExNTEiLCJjbGllbnRfaWQiOiJ3ZWJBbmd1bGFyIn0._LMCj9jIhjX8A4dixjRLa6F6G9MDRCh7bwGhokWg0UA\",\n    \"expires_in\": 1799,\n    \"scope\": \"read write\",\n    \"jti\": \"833e491f-a6bf-4242-a23f-a5227e3a3b1e\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "Invoice",
+					"item": [
+						{
+							"name": "Get All Invoices",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNzAyMTEsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjM4NGE3NzQ2LTM3OTItNDNjNi04NTRmLTRhNGI3ZjcxN2Y5NSIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.wQgJ46UwW5OSK6PfuSp8FuzQAhALZRQiJZb4aIudjZY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8005/api/invoice/invoices",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"invoice",
+										"invoices"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Invoices",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8005/api/invoice/invoices",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"invoice",
+												"invoices"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:19:48 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"amount\": 1000,\n        \"state\": 0\n    },\n    {\n        \"id\": 2,\n        \"amount\": 5000,\n        \"state\": 0\n    },\n    {\n        \"id\": 3,\n        \"amount\": 300,\n        \"state\": 0\n    },\n    {\n        \"id\": 4,\n        \"amount\": 600,\n        \"state\": 0\n    },\n    {\n        \"id\": 5,\n        \"amount\": 400,\n        \"state\": 0\n    },\n    {\n        \"id\": 6,\n        \"amount\": 100,\n        \"state\": 0\n    },\n    {\n        \"id\": 7,\n        \"amount\": 1000,\n        \"state\": 0\n    },\n    {\n        \"id\": 8,\n        \"amount\": 2000,\n        \"state\": 0\n    },\n    {\n        \"id\": 9,\n        \"amount\": 5000,\n        \"state\": 0\n    },\n    {\n        \"id\": 10,\n        \"amount\": 1000,\n        \"state\": 0\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Invoice By",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNjczNjcsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjFhYjg5MzQwLTA2ZTYtNGJmOC04NDM5LTFjMWYxMzNkZjRjMSIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.1wBt6xET4Kop-EQUaauMsWLs2orjzHjU8R5CQoHfEzo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8005/api/invoice/invoices/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"invoice",
+										"invoices",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Invoice By",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8005/api/invoice/invoices/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"invoice",
+												"invoices",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:20:54 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"amount\": 1000,\n    \"state\": 0\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Security",
+					"item": [
+						{
+							"name": "Get Token Copy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "webAngular",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "jhon",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8005/api/security/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"security",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Token Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "jhon",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "12345",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "password",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8005/api/security/oauth/token",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"security",
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:19:04 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNjczNDQsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImJjMDJjODFmLTljYzUtNDczZi1iNmZjLWNlNzUxZTA2NWE1NCIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.qDm--wrStoUpSSH2fkhd3Pac35Cm_qD6H2laLHysXkY\",\n    \"token_type\": \"bearer\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqaG9uIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6ImJjMDJjODFmLTljYzUtNDczZi1iNmZjLWNlNzUxZTA2NWE1NCIsImV4cCI6MTYyMTM2OTE0NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI0ZDBkNDVhNC1hMGM4LTRkYjktODM5Mi1hNDQxYWJkNjFiOWYiLCJjbGllbnRfaWQiOiJ3ZWJBbmd1bGFyIn0.xjgVzmhhVcO23BJLOCNHwLq9l3pDUUGN3S62F2s2tbM\",\n    \"expires_in\": 1799,\n    \"scope\": \"read write\",\n    \"jti\": \"bc02c81f-9cc5-473f-b6fc-ce751e065a54\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Pay",
+					"item": [
+						{
+							"name": "Pay Invoice",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNjczNjcsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjFhYjg5MzQwLTA2ZTYtNGJmOC04NDM5LTFjMWYxMzNkZjRjMSIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.1wBt6xET4Kop-EQUaauMsWLs2orjzHjU8R5CQoHfEzo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"amount\": 1000,   \r\n    \"invoiceId\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8005/api/payment/pay",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"payment",
+										"pay"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Pay Invoice",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"amount\": 100,   \r\n    \"invoiceId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8005/api/payment/pay",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"payment",
+												"pay"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:28:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 12,\n    \"invoiceId\": 3,\n    \"amount\": 100,\n    \"date\": \"2021-05-18T19:28:14.617+00:00\"\n}"
+								},
+								{
+									"name": "Pay Invoice",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"amount\": 1000,   \r\n    \"invoiceId\": 10\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8005/api/payment/pay",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"payment",
+												"pay"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:49:13 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 14,\n    \"invoiceId\": 10,\n    \"amount\": 1000,\n    \"date\": \"2021-05-18T19:49:11.356+00:00\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"item": [
+						{
+							"name": "Get Transaction By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNjczNjcsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjFhYjg5MzQwLTA2ZTYtNGJmOC04NDM5LTFjMWYxMzNkZjRjMSIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.1wBt6xET4Kop-EQUaauMsWLs2orjzHjU8R5CQoHfEzo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8005/api/transaction/invoice/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"transaction",
+										"invoice",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Transaction By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8005/api/transaction/invoice/3",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"transaction",
+												"invoice",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:32:56 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"10\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"11\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"12\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"13\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get All Transaction",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjEzNjkxOTIsInVzZXJfbmFtZSI6Impob24iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjNjNTQ4MzliLTY1MWUtNDA1NS1hODEyLTdmMjM5MWQ4YzRiNyIsImNsaWVudF9pZCI6IndlYkFuZ3VsYXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.NPO9Nj6qHkcHvYW9T768qKnGhXKV8Q7Vw9h9sWGHVBQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8005/api/transaction/invoice",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"transaction",
+										"invoice"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Transaction",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8005/api/transaction/invoice",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"transaction",
+												"invoice"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:33:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"10\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"11\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"12\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"13\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    }\n]"
+								},
+								{
+									"name": "Get All Transaction",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8005/api/transaction/invoice",
+											"host": [
+												"localhost"
+											],
+											"port": "8005",
+											"path": [
+												"api",
+												"transaction",
+												"invoice"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 May 2021 19:50:03 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"10\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"11\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"12\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"13\",\n        \"amount\": 100,\n        \"invoiceId\": 3\n    },\n    {\n        \"id\": \"14\",\n        \"amount\": 1000,\n        \"invoiceId\": 10\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
