@@ -14,7 +14,9 @@ Para instalar el Microservicio, se debe ejecutar el archivo [test-configServer.s
 
 ## Uso
 
-Este proyecto Cuenta Con los archivos de configuracion centralizados de cada uno de los Microservicios del Proyecto
+Este proyecto Cuenta Con los archivos de configuracion centralizados de cada uno de los Microservicios del Proyecto.
+
+A continuación los links con los microservicios que componen el proyecto:
 
 - [AforoTest-Invoice](https://github.com/jhonariza03/AforoTest-Invoice) - [ms-test-invoice-dev.properties](https://github.com/jhonariza03/AforoTest-Config/blob/main/ms-test-invoice-dev.properties)
 - [AforoTest-Pay](https://github.com/jhonariza03/AforoTest-Pay) - [ms-test-pay-dev.properties](https://github.com/jhonariza03/AforoTest-Config/blob/main/ms-test-pay-dev.properties)
